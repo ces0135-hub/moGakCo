@@ -37,12 +37,8 @@ function addGit() {
     gitInput.style.display = "none";
 }
 
-let getIntroInput = document.getElementsByClassName("enterIntro");
-getIntroInput.addEventListener("keyup", function(event) {
-    if(event.keyCode === 13) {
-        addIntro();
-    }
-})
+//얘는 왜 있는 코드인지 모르겠는데 enterIntro라는 클래스는 존재하지도 않고
+//얘때문에 아래 있는 코드들도 동작 안해서 얘부터 일단 지움
 
 function createSpan() {
     let newSpan = document.createElement('span');
@@ -81,10 +77,11 @@ function addIntro() {
 
 
 //input 창에서 enter를 누르면 addIntro() 호출
-let introInputForEvent = document.getElementsByClassName('setIntro');
+//기존 코드는 클래스명이 setIntro인 모든 elements를 받아오는 HTMLCollection이었음. 해당 콜렉션의 0번 인덱스가 원하는 element.
+let introInputForEvent = document.getElementsByClassName('setIntro')[0];
 introInputForEvent.addEventListener('keyup', function(event) {
     if(event.keyCode === 13) {
-        alert('enter');  //check용 -> 왜 안 되냐
+        alert('enter');
         addIntro();
     }
 })
