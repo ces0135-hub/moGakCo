@@ -42,25 +42,43 @@ let introDiv = document.getElementsByClassName("personalIntro")[0];
 let firstInputTag = document.getElementById("firstInput");
 firstInputTag.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
-        getNodeLen();
+        getLen();
     }
 })
 
+/*
 function getNodeLen() {
     let getNode = document.querySelectorAll(".setIntro");
     for(let i=0; i<getNode.length; i++) {
-        getNode[i].addEventListener("keyup", function(event) {
-            if(event.keyCode === 13) {
-                addInput();
-            }
-            getNode[i].removeEventListener();
-        });
+        getNode[i].addEventListener("keyup", enterUpHandler);
+        //getNode[i].removeEventListener("keyup", enterUpHandler);
     }
 }
-
+*/
 function addInput() {
     let newInput = document.createElement("input");
+    let newBr = document.createElement("br");
     newInput.setAttribute("class", "setIntro");
 
     introDiv.appendChild(newInput);
+    introDiv.appendChild(newBr);
+    getLen();
+}
+/*
+let enterUpHandler = function(event) {
+    if(event.keyCode === 13) {
+        addInput();
+    }
+}
+*/
+
+function getLen() {
+    let getIntroLen = document.querySelectorAll(".setIntro");
+    getIntroLen.forEach(Element => {
+        Element.addEventListener("keyup", function(event) {
+            if(event.keyCode === 13) {
+                addInput();
+            }
+        })
+    })
 }
