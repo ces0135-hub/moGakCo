@@ -38,29 +38,27 @@ function addGit() {
 }
 
 
-let introDiv = document.getElementsByClassName("personalIntro")[0];
-let firstInputTag = document.getElementById("firstInput");
-firstInputTag.addEventListener("keyup", function(event) {
-    if(event.keyCode === 13) {
-        getNodeLen();
-    }
-})
-
-function getNodeLen() {
-    let getNode = document.querySelectorAll(".setIntro");
-    for(let i=0; i<getNode.length; i++) {
-        getNode[i].addEventListener("keyup", function(event) {
-            if(event.keyCode === 13) {
-                addInput();
-            }
-            getNode[i].removeEventListener();
-        });
-    }
+function enterDetect(event) {
+  if(event.keyCode === 13) {
+    addInput();
+  }
 }
 
+function introEvent() {
+    let intros = document.querySelectorAll(".setIntro");
+    intros.forEach(element => {
+        element.removeEventListener("keyup", enterDetect)
+        element.addEventListener("keyup", enterDetect);
+    });
+}
+introEvent();
+
+
+const introDiv = document.querySelector(".personalIntro")
 function addInput() {
     let newInput = document.createElement("input");
     newInput.setAttribute("class", "setIntro");
 
     introDiv.appendChild(newInput);
+    introEvent();
 }
