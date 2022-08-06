@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>기업팅 - 당신의 재능을 보여라!</title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
+            /* main Styles */
+
+            html { box-sizing: border-box; }
+
+            *, *:before, *:after { box-sizing: inherit; }
+
+            body {
+            background: #fafafa;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            margin: 0;
+            }
+
+            a { text-decoration: none; }
+
+            .container {
+            width: 1000px;
+            margin-left: 30px;
+            }
+
+            h1 { text-align:center; margin-top:150px;}
+
+            /* Navigation Styles */
+
+            nav { background: #000000; }
+
+            nav ul {
+            font-size: 0;
+            margin-left: 100px;
+            padding: 0;
+            }
+
+            nav ul li {
+            display: inline-block;
+            position: relative;
+            }
+
+            nav ul li a {
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            padding: 15px 14px;
+            transition: 0.3s linear;
+            }
+
+            nav ul li:hover { background: #474747; }
+
+            nav ul li ul {
+            border-bottom: 5px solid #000000;
+            margin-left:-2px;
+            display: none;
+            position: absolute;
+            width: 150px;
+            }
+            
+            nav ul li ul li {
+            border-top: 1px solid #ffffff;
+            display: block;
+            }
+
+            nav ul li ul li:first-child { border-top: none; }
+            nav ul li:nth-child(4):nth-child(5) { float:right; }
+
+            nav ul li ul li a {
+            background: #474747;
+            display: block;
+            padding: 10px 14px;
+            }
+
+            nav ul li ul li a:hover { background: #126d9b; }
+
+            nav .fa.fa-angle-down { margin-left: 6px; }
+
+            #logo{
+                position: absolute;
+                width: 70px;
+                height: 30px;
+                left: 25px;
+                top: 6px;
+                background: url(image);
+                border-radius: 21px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <a href="./index2.html"><img src="./logo.png" id="logo"></a>
+                <ul>
+                    <li><a href="./index2.html">Home</a></li>
+                    <li><a href="#">MEET<i class='fa fa-angle-down'></i></a>
+                        <ul>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Company</a></li>
+                        </ul></li>
+                    <li> <a href="#">TEAM<i class='fa fa-angle-down'></i></a>
+                        <ul>
+                        <li><a href="#">공모전</a></li>
+                        <li><a href="#">코딩공부</a></li>
+                        <li><a href="#">Tutor - Tutee</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sign IN</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+        <script>
+            $('nav li').hover(
+                function() {
+                    $('ul', this).stop().slideDown(200);
+                },
+                function() {
+                $('ul', this).stop().slideUp(200);
+                }
+            );
+        </script>
+    </body>
+</html>
