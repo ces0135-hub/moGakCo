@@ -46,39 +46,51 @@ firstInputTag.addEventListener("keyup", function(event) {
     }
 })
 
-/*
-function getNodeLen() {
-    let getNode = document.querySelectorAll(".setIntro");
-    for(let i=0; i<getNode.length; i++) {
-        getNode[i].addEventListener("keyup", enterUpHandler);
-        //getNode[i].removeEventListener("keyup", enterUpHandler);
-    }
-}
-*/
-function addInput() {
-    let newInput = document.createElement("input");
-    let newBr = document.createElement("br");
-    newInput.setAttribute("class", "setIntro");
+inputCnt = 1;
 
-    introDiv.appendChild(newInput);
+function addInput() {
+    let newSpan = document.createElement("span");  //<span></span>
+    let newInput = document.createElement("input");  //<input>
+
+    newInput.setAttribute("class", "setIntro");
+    //newInput.setAttribute("id", "intro_"+inputCnt);
+    newInput.setAttribute("type", "text");
+
+    newSpan.innerText = "FUCK";
+
+    newSpan.appendChild(newInput);  //<span><input></span>
+
+    let newBr = document.createElement("br"); //<br>
+    
+
+    introDiv.appendChild(newSpan);
     introDiv.appendChild(newBr);
+
     getLen();
+    //inputCnt++;
 }
-/*
-let enterUpHandler = function(event) {
-    if(event.keyCode === 13) {
-        addInput();
-    }
-}
-*/
+
 
 function getLen() {
     let getIntroLen = document.querySelectorAll(".setIntro");
-    getIntroLen.forEach(Element => {
+    /*getIntroLen.forEach(Element => {
         Element.addEventListener("keyup", function(event) {
             if(event.keyCode === 13) {
                 addInput();
             }
         })
+        Element.removeEventListener("keyup", arguments.callee);
+    })*/
+    addEvent(getIntroLen);
+}
+
+function addEvent(nodeList) {
+    nodeList.forEach(Element => {
+        Element.addEventListener("keyup", function(event) {
+            if(event.keyCode === 13) {
+                addInput();
+            }
+        })
+        //Element.style.display = "none";
     })
 }
