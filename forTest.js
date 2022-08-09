@@ -39,38 +39,42 @@ function addGit() {
 
 
 let introDiv = document.getElementsByClassName("personalIntro")[0];  //추가할 div
-let firstInput = document.getElementById("firstInput");
+let firstInput = document.getElementById("input_1");
 firstInput.addEventListener("keyup", addEvent);
 
+let introCnt = 1;
+
 function addIntro() {
+    introCnt++;
+
     let newSpan = document.createElement("span");
     let newInput = document.createElement("input");
     newInput.setAttribute("class", "setIntro");
+    newInput.setAttribute("id", "input_"+introCnt);
 
     let newBr = document.createElement("br");
     
     newSpan.appendChild(newInput);  //<span><input></span>
     introDiv.appendChild(newSpan);
     introDiv.appendChild(newBr);
-    alert(newInput.value);
+
+    addEvent();
 }
 
 
 function addEvent() {
-    let introClass = document.querySelectorAll(".setIntro");  //Node List
-
-    introClass.forEach(Element => {
-        Element.addEventListener("keyup", EnterKeyUpHandler);  //새로운 input 추가 완료
-    })
-    //removeEvent();  //지금까지 존재하는 input에 할당된 eventListener 삭제
+    let introClass = document.getElementById("input_"+introCnt);
+    introClass.addEventListener("keyup", EnterKeyUpHandler);
 }
 
+/*
 function removeEvent() {
     let introClass = document.querySelectorAll(".setIntro");
     introClass.forEach(Element => {
         Element.removeEventListener("keyup", EnterKeyUpHandler);
     })
 }
+*/
 
 function EnterKeyUpHandler(event) {
     if(event.keyCode === 13) {

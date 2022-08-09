@@ -38,59 +38,46 @@ function addGit() {
 }
 
 
-let introDiv = document.getElementsByClassName("personalIntro")[0];
-let firstInputTag = document.getElementById("firstInput");
-firstInputTag.addEventListener("keyup", function(event) {
-    if(event.keyCode === 13) {
-        getLen();
-    }
-})
+let introDiv = document.getElementsByClassName("personalIntro")[0];  //추가할 div
+let firstInput = document.getElementById("input_1");
+firstInput.addEventListener("keyup", addEvent);
 
-inputCnt = 1;
+let introCnt = 1;
 
-function addInput() {
-    let newSpan = document.createElement("span");  //<span></span>
-    let newInput = document.createElement("input");  //<input>
+function addIntro() {
+    introCnt++;
 
+    let newSpan = document.createElement("span");
+    let newInput = document.createElement("input");
     newInput.setAttribute("class", "setIntro");
-    //newInput.setAttribute("id", "intro_"+inputCnt);
-    newInput.setAttribute("type", "text");
+    newInput.setAttribute("id", "input_"+introCnt);
 
-    newSpan.innerText = "FUCK";
-
-    newSpan.appendChild(newInput);  //<span><input></span>
-
-    let newBr = document.createElement("br"); //<br>
+    let newBr = document.createElement("br");
     
-
+    newSpan.appendChild(newInput);  //<span><input></span>
     introDiv.appendChild(newSpan);
     introDiv.appendChild(newBr);
 
-    getLen();
-    //inputCnt++;
+    addEvent();
 }
 
 
-function getLen() {
-    let getIntroLen = document.querySelectorAll(".setIntro");
-    /*getIntroLen.forEach(Element => {
-        Element.addEventListener("keyup", function(event) {
-            if(event.keyCode === 13) {
-                addInput();
-            }
-        })
-        Element.removeEventListener("keyup", arguments.callee);
-    })*/
-    addEvent(getIntroLen);
+function addEvent() {
+    let introClass = document.getElementById("input_"+introCnt);
+    introClass.addEventListener("keyup", EnterKeyUpHandler);
 }
 
-function addEvent(nodeList) {
-    nodeList.forEach(Element => {
-        Element.addEventListener("keyup", function(event) {
-            if(event.keyCode === 13) {
-                addInput();
-            }
-        })
-        //Element.style.display = "none";
+/*
+function removeEvent() {
+    let introClass = document.querySelectorAll(".setIntro");
+    introClass.forEach(Element => {
+        Element.removeEventListener("keyup", EnterKeyUpHandler);
     })
+}
+*/
+
+function EnterKeyUpHandler(event) {
+    if(event.keyCode === 13) {
+        addIntro();  //input 추가
+    }
 }
