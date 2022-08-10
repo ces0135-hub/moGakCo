@@ -1,4 +1,5 @@
 let nameInput = document.getElementById("enterProfileName");
+nameInput.focus();
 nameInput.addEventListener("keyup", function(event) {
     if(event.keyCode === 13) {
         addName();
@@ -52,6 +53,8 @@ function addIntro() {
 
     newInput.setAttribute("class", "setIntro");
     newInput.setAttribute("id", "introInput_"+introCnt);
+    newInput.setAttribute("type", "text");
+    newInput.setAttribute("placeholder", "자유롭게 작성해주세요.");
 
     newSpan.setAttribute("class", "introSpan");
     newSpan.setAttribute("id", "introSpan_"+introCnt);
@@ -69,9 +72,9 @@ function addIntro() {
     addEvent();
 }
 
-
 function addEvent() {
     let introClass = document.getElementById("introInput_"+introCnt);
+    introClass.focus();
     introClass.addEventListener("keyup", EnterKeyUpHandler);
 }
 
