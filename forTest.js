@@ -39,7 +39,7 @@ function addGit() {
 
 
 let introDiv = document.getElementsByClassName("personalIntro")[0];  //추가할 div
-let firstInput = document.getElementById("input_1");
+let firstInput = document.getElementById("introInput_1");
 firstInput.addEventListener("keyup", addEvent);
 
 let introCnt = 1;
@@ -49,11 +49,19 @@ function addIntro() {
 
     let newSpan = document.createElement("span");
     let newInput = document.createElement("input");
+
     newInput.setAttribute("class", "setIntro");
-    newInput.setAttribute("id", "input_"+introCnt);
+    newInput.setAttribute("id", "introInput_"+introCnt);
+
+    newSpan.setAttribute("class", "introSpan");
+    newSpan.setAttribute("id", "introSpan_"+introCnt);
+
+    let getIntroTargetSpan = document.getElementById("introSpan_"+(introCnt - 1));
+    let getIntroTxt = document.getElementById("introInput_"+(introCnt - 1));
+    getIntroTargetSpan.innerText = getIntroTxt.value;
 
     let newBr = document.createElement("br");
-    
+
     newSpan.appendChild(newInput);  //<span><input></span>
     introDiv.appendChild(newSpan);
     introDiv.appendChild(newBr);
@@ -63,7 +71,7 @@ function addIntro() {
 
 
 function addEvent() {
-    let introClass = document.getElementById("input_"+introCnt);
+    let introClass = document.getElementById("introInput_"+introCnt);
     introClass.addEventListener("keyup", EnterKeyUpHandler);
 }
 
