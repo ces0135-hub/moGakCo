@@ -39,7 +39,7 @@ function addGit() {
 }
 
 
-let introDiv = document.getElementsByClassName("personalIntro")[0];  //추가할 div
+let introDiv = document.getElementsByClassName("personalCareer")[0];  //추가할 div
 let firstInput = document.getElementById("introInput_1");
 firstInput.addEventListener("keyup", addEvent);
 

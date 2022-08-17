@@ -6,7 +6,8 @@ body {
     background-color: rgb(223, 189, 254);
     padding-bottom: 10px;
     padding-top: 10px;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .profilePicture {
@@ -31,6 +32,7 @@ input {
     padding: 4px 8px;
     font-size: 25px;
     font: bold;
+    border-radius: 10px;
     display: flex;
     align-items: center;
 }
@@ -44,6 +46,9 @@ input {
     padding: 4px 8px;
     font-size: 25px;
     font: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 #gitBox {
     margin-top: 10px;
@@ -53,6 +58,9 @@ input {
     padding: 4px 8px;
     font-size: 25px;
     font: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #profileImage {
@@ -63,7 +71,7 @@ input {
 
 .personalCareer {
     margin-left: 50px;
-    width: 800px;
+    width: 520px;
     height: 200px;
     background-color: rgb(232, 181, 255);
 }
@@ -96,4 +104,28 @@ input {
 .introSpan {
     margin-left: 5px;
     margin-top: 5px;
+}
+
+.personalIntro {
+    margin-top: 50px;
+}
+
+
+#recommendRate {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.recommendBox {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    margin-right: 50px;
 }
