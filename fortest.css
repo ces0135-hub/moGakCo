@@ -72,7 +72,7 @@ input {
 .personalCareer {
     margin-left: 50px;
     width: 520px;
-    height: 200px;
+    padding-bottom: 7px;
     background-color: rgb(232, 181, 255);
 }
 
@@ -107,9 +107,9 @@ input {
 }
 
 .personalIntro {
+    display: flex;
     margin-top: 50px;
 }
-
 
 #recommendRate {
     display: flex;
@@ -123,9 +123,22 @@ input {
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .recommendBox {
     display: flex;
     margin-top: 50px;
     justify-content: center;
     margin-right: 50px;
+}
+
+#txtAreaContainer {
+    display: flex;
+    background-color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#displayTxt {
+    display: flex;
+
 }

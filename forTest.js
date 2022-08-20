@@ -92,3 +92,33 @@ function EnterKeyUpHandler(event) {
         addIntro();  //input 추가
     }
 }
+
+
+let introDisplayBox = document.getElementById("displayTxt");
+introDisplayBox.style.display = "none";
+
+
+let txtArSubBtn = document.getElementById("introSubmit");
+txtArSubBtn.addEventListener('click', addTxtArea);
+
+//제출 버튼을 눌렀을 때, 아예 새로운 표 형식이 생성돠도록 수정 필요
+function addTxtArea() {
+    let getIntroTxtArea = document.getElementById("introTxtArea");
+    let txtAreaVal = getIntroTxtArea.value;
+    getIntroTxtArea.style.display = "none";
+    document.getElementById("introSubmit").style.display = "none";
+
+    addTxtAreaTable(txtAreaVal);    
+}
+
+function addTxtAreaTable(newTxt) {
+    let txtArSpan = document.createElement("span");
+    txtArSpan.setAttribute("id", "txtAreaContainer");
+    
+    txtArSpan.innerText = newTxt;
+    introDisplayBox.appendChild(txtArSpan);
+    introDisplayBox.style.display = "block";
+
+    //let txtAreaBox = document.getElementsByClassName("personalIntro")[0];
+    //txtAreaBox.appendChild(txtArSpan);
+}
