@@ -4,99 +4,18 @@
         <meta charset="utf-8">
         <title>기업팅 - 당신의 재능을 보여라!</title>
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-        <style>
-            @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
-
-            /* main Styles */
-
-            html { box-sizing: border-box; }
-
-            *, *:before, *:after { box-sizing: inherit; }
-
-            body {
-            background: #fafafa;
-            font-family: "Roboto", sans-serif;
-            font-size: 14px;
-            margin: 0;
-            }
-
-            a { text-decoration: none; }
-
-            .container {
-            width: 1000px;
-            margin-left: 30px;
-            }
-
-            h1 { text-align:center; margin-top:150px;}
-
-            /* Navigation Styles */
-
-            nav { background: #000000; }
-
-            nav ul {
-            font-size: 0;
-            margin-left: 100px;
-            padding: 0;
-            }
-
-            nav ul li {
-            display: inline-block;
-            position: relative;
-            }
-
-            nav ul li a {
-            color: #fff;
-            display: block;
-            font-size: 14px;
-            padding: 15px 14px;
-            transition: 0.3s linear;
-            }
-
-            nav ul li:hover { background: #474747; }
-
-            nav ul li ul {
-            border-bottom: 5px solid #000000;
-            margin-left:-2px;
-            display: none;
-            position: absolute;
-            width: 150px;
-            }
-            
-            nav ul li ul li {
-            border-top: 1px solid #ffffff;
-            display: block;
-            }
-
-            nav ul li ul li:first-child { border-top: none; }
-            nav ul li:nth-child(4):nth-child(5) { float:right; }
-
-            nav ul li ul li a {
-            background: #474747;
-            display: block;
-            padding: 10px 14px;
-            }
-
-            nav ul li ul li a:hover { background: #126d9b; }
-
-            nav .fa.fa-angle-down { margin-left: 6px; }
-
-            #logo{
-                position: absolute;
-                width: 70px;
-                height: 30px;
-                left: 25px;
-                top: 6px;
-                background: url(image);
-                border-radius: 21px;
-            }
-        </style>
+        <link rel="stylesheet" href="style/menuStyle.css">
+        <link rel="stylesheet" href="style/loginStyle.css">
+        <link rel="stylesheet" href="style/signUpStyle.css">
+        <link rel="stylesheet" href="style/slideStyle.css">
+        <link rel="stylesheet" href="style/shortProfile.css">
     </head>
     <body>
         <nav>
             <div class="container">
-                <a href="./index2.html"><img src="./logo.png" id="logo"></a>
+                <a href="./main.html"><img src="./image/logo.png" id="logo"></a>
                 <ul>
-                    <li><a href="./index2.html">Home</a></li>
+                    <li><a href="./main.html">Home</a></li>
                     <li><a href="#">MEET<i class='fa fa-angle-down'></i></a>
                         <ul>
                             <li><a href="#">Profile</a></li>
@@ -109,21 +28,36 @@
                         <li><a href="#">Tutor - Tutee</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Sign IN</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="./logIn.html">Sign IN</a></li>
+                    <li><a href="./signUp.html">Sign Up</a></li>
                 </ul>
             </div>
         </nav>
         <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
-        <script>
-            $('nav li').hover(
-                function() {
-                    $('ul', this).stop().slideDown(200);
-                },
-                function() {
-                $('ul', this).stop().slideUp(200);
-                }
-            );
-        </script>
+        <script type="text/javascript" src="./js/slideDown.js"></script>
+
+        <div id="banner">
+            <div id="slide">
+                <ul>
+                    <li><a href="#"><img src="./image/moon.jpg" alt="슬라이드1" id="moon"></a></li>
+                    <li><a href="#"><img src="./image/earth.jpg" alt="슬라이드2"id="earth"></a></li>
+                    <li><a href="#"><img src="./image/sun.jpg" alt="슬라이드3" id="sun"></a></li>
+                   </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/slide.js"></script>
+
+        <hr/>
+
+        <div class="shortProf">
+             <div><img src="./image/shortImage.png" id="shortImage"></div>
+             <div id="shortText">
+                <ul>
+                    <li><div id="nickname">⚑ 한국외대 개발자</div></li>
+                    <li><div id="language">CSS HTML JAVA Python</div></li>
+                    <li><a href="#" id="goProf">자세히 보기</a></li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
