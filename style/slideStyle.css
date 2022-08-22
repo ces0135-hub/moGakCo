@@ -27,19 +27,19 @@
     border-radius: 30px 30px 30px 30px;
 }
 
-#earth{
+#coding1{
     width: 1200px;
     height: 400px;
     object-fit: cover;
 }
 
-#moon{
+#coding2{
     width:1200px;
     height: 400px;
     object-fit: cover;
 }
 
-#sun{
+#coding3{
     width: 1200px;
     height: 400px;
     object-fit: cover;
