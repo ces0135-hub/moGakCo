@@ -7,7 +7,7 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .profilePicture {
@@ -74,6 +74,7 @@ input {
     width: 520px;
     padding-bottom: 7px;
     background-color: rgb(232, 181, 255);
+    border-radius: 10px;
 }
 
 .enterIntro {
@@ -109,6 +110,8 @@ input {
 .personalIntro {
     display: flex;
     margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 250px;
 }
 
 #recommendRate {
@@ -125,20 +128,46 @@ input {
 }
 
 .recommendBox {
-    display: flex;
     margin-top: 50px;
-    justify-content: center;
     margin-right: 50px;
+}
+
+#recBtn {
+    position: relative;
+    top: 4px;
+    right: 4px;
+    font-weight: bold;
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
 }
 
 #txtAreaContainer {
     display: flex;
     background-color: white;
     font-size: 30px;
-    font-weight: bold;
 }
 
 #displayTxt {
     display: flex;
+    width: 600px;
+    margin-right: 90px;
+}
 
+#introTxtArea {
+    margin-right: 10px;
+    border-color: rgb(176, 54, 252);
+    border-radius: 10px;
+}
+
+#introSubmit {
+    background-color: white;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    top: 518px;
+    border: none;
+    border-radius: 5px;
 }

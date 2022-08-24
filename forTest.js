@@ -97,11 +97,9 @@ function EnterKeyUpHandler(event) {
 let introDisplayBox = document.getElementById("displayTxt");
 introDisplayBox.style.display = "none";
 
-
 let txtArSubBtn = document.getElementById("introSubmit");
 txtArSubBtn.addEventListener('click', addTxtArea);
 
-//제출 버튼을 눌렀을 때, 아예 새로운 표 형식이 생성돠도록 수정 필요
 function addTxtArea() {
     let getIntroTxtArea = document.getElementById("introTxtArea");
     let txtAreaVal = getIntroTxtArea.value;
@@ -118,7 +116,19 @@ function addTxtAreaTable(newTxt) {
     txtArSpan.innerText = newTxt;
     introDisplayBox.appendChild(txtArSpan);
     introDisplayBox.style.display = "block";
-
-    //let txtAreaBox = document.getElementsByClassName("personalIntro")[0];
-    //txtAreaBox.appendChild(txtArSpan);
 }
+
+let curRec;
+
+function getRecRate() {
+    curRec = document.getElementById("recommendRate").innerHTML * 1;
+}
+
+function addRec() {
+    getRecRate();
+
+    document.getElementById("recommendRate").innerHTML = (curRec + 1);
+}
+
+let getRecBtn = document.getElementById("recBtn");
+getRecBtn.addEventListener("click", addRec);
