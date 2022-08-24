@@ -1,5 +1,20 @@
 .notice_container{
     margin : auto;
-    text-align: center;
+    margin-top : 15px;
+    width:1200px;
+    height:200px;
+    border: 1px solid #f2f2f2;
+    border-radius: 30px 30px 30px 30px;
 }
 
+.inform{
+    width: 550px;
+    height: 200px;
+    float:left;
+}
+
+.question{
+    width:550px;
+    height:200px;
+    float:right;
+}
