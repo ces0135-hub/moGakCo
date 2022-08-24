@@ -13,14 +13,14 @@
 #banner{
     padding-top: 10px;
     width: 1200px;
-    height: 400px;
+    height: 300px;
     border: 1px solid white;
     margin: 0 auto;
 }
 
 #slide{
     width:1200px;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     object-fit: cover;
     border-radius: 30px 30px 30px 30px;
@@ -28,19 +28,19 @@
 
 #coding1{
     width: 1200px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
 #coding2{
     width:1200px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
 #coding3{
     width: 1200px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 

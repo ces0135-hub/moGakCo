@@ -8,13 +8,35 @@
 }
 
 .inform{
+    margin-left:20px;
+    margin-top: 10px;
     width: 550px;
     height: 200px;
     float:left;
 }
+.alarm{
+    width:100px;
+    float:left;
+}
+
+.alarm_inset{
+    float:left;
+    width:400px;
+}
 
 .question{
+    margin-top: 10px;
+    margin-left:20px;
     width:550px;
     height:200px;
     float:right;
+}
+
+.qanda{
+    width:100px;
+    float:left;
+}
+.qanda_insert{
+    float:left;
+    width:400px;
 }
