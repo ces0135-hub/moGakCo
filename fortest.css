@@ -154,6 +154,7 @@ input {
     display: flex;
     width: 600px;
     margin-right: 90px;
+    font-weight: bold;
 }
 
 #introTxtArea {
