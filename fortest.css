@@ -1,0 +1,174 @@
+body {
+    background-color: rgb(237, 223, 250);
+}
+
+.profileContainer {
+    background-color: rgb(223, 189, 254);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
+.profilePicture {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+input {
+    font-size: 15px;
+    font: bold;
+    color: gray;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+#nameBox {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 300px;
+    background-color: rgb(219, 150, 223);
+    padding: 4px 8px;
+    font-size: 25px;
+    font: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+#emailBox {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 300px;
+    background-color: rgb(219, 150, 223);
+    padding: 4px 8px;
+    font-size: 25px;
+    font: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+#gitBox {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 300px;
+    background-color: rgb(219, 150, 223);
+    padding: 4px 8px;
+    font-size: 25px;
+    font: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#profileImage {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(219, 150, 223);
+}
+
+.personalCareer {
+    margin-left: 50px;
+    width: 520px;
+    padding-bottom: 7px;
+    background-color: rgb(232, 181, 255);
+    border-radius: 10px;
+}
+
+.enterIntro {
+    width: 750px;
+    height: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.introSpan {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.setIntro {
+    margin-top: 5px;
+    width: 500px;
+    height: 25px;
+    font-size: 25px;
+}
+
+#careerDisplay {
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.introSpan {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.personalIntro {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 250px;
+}
+
+#recommendRate {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recommendBox {
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+#recBtn {
+    position: relative;
+    top: 4px;
+    right: 4px;
+    font-weight: bold;
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+}
+
+#txtAreaContainer {
+    display: flex;
+    background-color: white;
+    font-size: 30px;
+}
+
+#displayTxt {
+    display: flex;
+    width: 600px;
+    margin-right: 90px;
+    font-weight: bold;
+}
+
+#introTxtArea {
+    margin-right: 10px;
+    border-color: rgb(176, 54, 252);
+    border-radius: 10px;
+}
+
+#introSubmit {
+    background-color: white;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    top: 518px;
+    border: none;
+    border-radius: 5px;
+}
